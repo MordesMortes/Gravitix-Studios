@@ -1,0 +1,336 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a117cf368dd7e4faa602390226be41, type: 3}
+  m_Name: BlockoutSceneSettings_FPS
+  m_EditorClassIdentifier: 
+  sceneName: FPS
+  currentTheme: 0
+  currentTexture: 1
+  cameraAnchor:
+  - name: Overview
+    position: {x: -0.24149413, y: -12.395073, z: 3.3599472}
+    rotation: {x: -0.5579386, y: 0.000000090643894, z: -0.00000059046863, w: -0.82988226}
+    size: 90.12671
+  - name: Side A
+    position: {x: 50.198986, y: -10.015468, z: 50.099827}
+    rotation: {x: -0.078875296, y: -0.4373178, z: 0.038539268, w: -0.8950121}
+    size: 90.12671
+  - name: Side B
+    position: {x: -48.64977, y: -11.265494, z: -60.7955}
+    rotation: {x: 0.0384809, y: -0.9050039, z: 0.083861746, w: 0.41527638}
+    size: 90.12671
+  - name: Side Room Overlook
+    position: {x: 53.851265, y: 1.9822907, z: -35.964806}
+    rotation: {x: 0.0036837803, y: 0.8987166, z: -0.0075498, w: 0.43844944}
+    size: 90.12671
+  assetDictionary:
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: 'Tri_Floor '
+    assetQuantity: 1
+  - assetName: Block_Slope_3x3x3
+    assetQuantity: 2
+  - assetName: Block_Slope_1x4x1
+    assetQuantity: 2
+  - assetName: Block_Slope_1x1x5
+    assetQuantity: 1
+  - assetName: Block_Slope_1x3x1
+    assetQuantity: 11
+  - assetName: Wall_Destroyed_025x1x3
+    assetQuantity: 2
+  - assetName: Block_Slope_1x1x1
+    assetQuantity: 5
+  - assetName: Block_Slope_Corner_1x1x4
+    assetQuantity: 4
+  - assetName: Block_1x3x1
+    assetQuantity: 1
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: Block_Pillar_T1_1x5x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_T1_1x1x1
+    assetQuantity: 5
+  - assetName: Block_Pillar_T2_1x3x1
+    assetQuantity: 1
+  - assetName: Block_Pillar_T2_1x2x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_T1_1x4x1
+    assetQuantity: 7
+  - assetName: Block_Wall_Pillar_T1_1x2x1
+    assetQuantity: 5
+  - assetName: Block_Corner_Cap_T1_1x1x1
+    assetQuantity: 2
+  - assetName: Block_Cap_T1_1x05x1
+    assetQuantity: 1
+  - assetName: Block_Cap_Ramp_T2_1x05x1
+    assetQuantity: 1
+  - assetName: Block_Corner_Cap_T2_1x05x1
+    assetQuantity: 1
+  - assetName: Block_Corner_Cap_T3_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Corner_Cap_T3_1x05x1
+    assetQuantity: 1
+  - assetName: Block_Corner_Cap_T4_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Corner_Cap_T1_1x05x1
+    assetQuantity: 1
+  - assetName: Block_Corner_T4_1x1x004
+    assetQuantity: 1
+  - assetName: Block_Corner_T3_1x1x004
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_Cap_T2_1x05x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_Cap_T3_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_Cap_T2_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_Cap_T1_1x05x1
+    assetQuantity: 2
+  - assetName: Block_Wall_Pillar_Cap_T1_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_T1_1x3x1
+    assetQuantity: 7
+  - assetName: Wall_Window_T1_025x3x1
+    assetQuantity: 1
+  - assetName: Wall_Doorway_025x3x4
+    assetQuantity: 1
+  - assetName: Wall_Doorway_025x3x3
+    assetQuantity: 1
+  - assetName: Wall_Window_T2_025x3x2
+    assetQuantity: 5
+  - assetName: Wall_Window_T2_025x3x1
+    assetQuantity: 2
+  - assetName: Slope_2x2x4
+    assetQuantity: 1
+  - assetName: Stairs_Open_2x2x4
+    assetQuantity: 1
+  - assetName: Stairs_Open_2x3x6
+    assetQuantity: 2
+  - assetName: Block_1x2x2
+    assetQuantity: 1
+  - assetName: Block_1x2x1
+    assetQuantity: 1
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: Wall_Destoryed_End_T1_025x3x1
+    assetQuantity: 2
+  - assetName: Wall_Destoryed_End_025x3x4
+    assetQuantity: 2
+  - assetName: Wall_Side_Destroyed_T1_025x1x1
+    assetQuantity: 1
+  - assetName: Wall_Side_Destroyed_T3_025x1x1 1
+    assetQuantity: 2
+  - assetName: Wall_Side_Destroyed_T2_025x1x1
+    assetQuantity: 1
+  - assetName: Wall_Destoryed_End_025x3x3
+    assetQuantity: 1
+  - assetName: Wall_Destoryed_End_025x3x2
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x1x4
+    assetQuantity: 2
+  - assetName: Wall_Bend_025x3x1
+    assetQuantity: 2
+  - assetName: Wall_Bend_025x3x3
+    assetQuantity: 3
+  - assetName: Wall_Bend_025x025x4
+    assetQuantity: 2
+  - assetName: Wall_Bend_025x025x3
+    assetQuantity: 2
+  - assetName: Wall_Bend_025x2x1
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x1x3
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x2x4
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x1x2
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x1x1
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x025x2
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x025x1
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x3x4
+    assetQuantity: 1
+  - assetName: Wall_Bend_025x3x2
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_T4_1x3x1
+    assetQuantity: 2
+  - assetName: Block_Corner_T1_1x5x1
+    assetQuantity: 3
+  - assetName: Block_Corner_T2_05x4x05
+    assetQuantity: 1
+  - assetName: Block_Corner_T4_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Inner_Corner_T1_1x2x2
+    assetQuantity: 1
+  - assetName: Block_Inner_Corner_T1_1x5x1
+    assetQuantity: 1
+  - assetName: Block_Inner_Corner_T3_1x4x1
+    assetQuantity: 1
+  - assetName: Block_Inner_Corner_T3_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Inner_Corner_T2_1x2x1
+    assetQuantity: 1
+  - assetName: 'Block_Corner_T1_1x5x1 '
+    assetQuantity: 1
+  - assetName: 'Block_Corner_T1_1x5x1 '
+    assetQuantity: 1
+  - assetName: Floor_Angle_5x-025x5
+    assetQuantity: 3
+  - assetName: Block_1x05x05
+    assetQuantity: 2
+  - assetName: Block_Slope_T1_3x05x05
+    assetQuantity: 1
+  - assetName: Block_Slope_T1_1x05x3
+    assetQuantity: 2
+  - assetName: Block_Slope_T1_1x05x4
+    assetQuantity: 1
+  - assetName: Block_Slope_T1_2x05x05
+    assetQuantity: 1
+  - assetName: Block_Slope_T1_Inverse_Corner_05x05x05
+    assetQuantity: 1
+  - assetName: Block_1x05x2
+    assetQuantity: 5
+  - assetName: Block_4x05x05
+    assetQuantity: 1
+  - assetName: Block_Slope_Corner_1x05x1
+    assetQuantity: 3
+  - assetName: Block_05x05x05
+    assetQuantity: 1
+  - assetName: Stairs_Small_2x05x2
+    assetQuantity: 1
+  - assetName: Block_Corner_T1_1x3x1
+    assetQuantity: 5
+  - assetName: Wall_025x1x2
+    assetQuantity: 1
+  - assetName: Wall_025x3x5
+    assetQuantity: 2
+  - assetName: Abstarct_Gate_1
+    assetQuantity: 1
+  - assetName: Block_Slope_T2_1x05x005
+    assetQuantity: 2
+  - assetName: Block_Slope_T2_1x05x1
+    assetQuantity: 2
+  - assetName: Block_Bend_1x3x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Angle_05x1x4
+    assetQuantity: 2
+  - assetName: Block_Wall_Angle_05x1x2
+    assetQuantity: 2
+  - assetName: Block_Wall_Angle_05x1x3
+    assetQuantity: 1
+  - assetName: Block_Corner_T1_1x2x1
+    assetQuantity: 1
+  - assetName: Block_Corner_T1_05x2x05
+    assetQuantity: 1
+  - assetName: Block_Corner_T1_1x1x1
+    assetQuantity: 8
+  - assetName: Block_Corner_T1_05x1x05
+    assetQuantity: 1
+  - assetName: Block_Corner_T2_05x1x05
+    assetQuantity: 4
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: Floor_Corner_3x-025x3
+    assetQuantity: 1
+  - assetName: Floor_Corner_1x-025x1
+    assetQuantity: 1
+  - assetName: Block_Pillar_T1_1x4x1
+    assetQuantity: 2
+  - assetName: Block_Pillar_T1_1x3x1
+    assetQuantity: 1
+  - assetName: Block_Pillar_T1_1x2x1
+    assetQuantity: 1
+  - assetName: Tree_4
+    assetQuantity: 1
+  - assetName: Bush_3
+    assetQuantity: 1
+  - assetName: Tree_6
+    assetQuantity: 1
+  - assetName: Vines_Solo
+    assetQuantity: 2
+  - assetName: Block_Wall_Pillar_Cap2_T1_1x1x1
+    assetQuantity: 3
+  - assetName: Block_Wall_Pillar_T1_1x5x1
+    assetQuantity: 3
+  - assetName: 'Tri_Trim '
+    assetQuantity: 1
+  - assetName: Block_Pillar_T2_1x4x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_T2_1x4x1
+    assetQuantity: 1
+  - assetName: Block_Wall_Pillar_T2_1x1x1
+    assetQuantity: 1
+  - assetName: Block_Pillar_T3_1x5x1
+    assetQuantity: 1
+  - assetName: 'Block_Corner_T1_1x5x1 '
+    assetQuantity: 1
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: Crate_1x1x1
+    assetQuantity: 4
+  - assetName: Shipping_Container
+    assetQuantity: 2
+  - assetName: Pallet_Closed 1
+    assetQuantity: 5
+  - assetName: Pallet_Closed
+    assetQuantity: 1
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: Crate_2x1x1
+    assetQuantity: 6
+  - assetName: Barrel
+    assetQuantity: 12
+  - assetName: Jump_Pad
+    assetQuantity: 6
+  - assetName: Barricade
+    assetQuantity: 1
+  - assetName: Block_Slope_T1_1x05x2
+    assetQuantity: 1
+  - assetName: Rock_Block_1x1x1
+    assetQuantity: 2
+  - assetName: Rock_Block_1x2x1
+    assetQuantity: 2
+  - assetName: Pebbles_Large_1
+    assetQuantity: 2
+  - assetName: Rock_Block_4x4x4
+    assetQuantity: 1
+  - assetName: Block_Corner_T1_1x1x004
+    assetQuantity: 2
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: Pipe_1x05x05
+    assetQuantity: 1
+  - assetName: Pipe_Thick_1x1x1
+    assetQuantity: 1
+  - assetName: Tube_Destroyed_End_4x4x2
+    assetQuantity: 1
+  - assetName: 'Tri_Wall '
+    assetQuantity: 1
+  - assetName: Rain_1
+    assetQuantity: 1
+  - assetName: Mountain_2
+    assetQuantity: 2
+  - assetName: Mountain_3
+    assetQuantity: 2
+  - assetName: Hill_1
+    assetQuantity: 4
+  - assetName: Mountain_1
+    assetQuantity: 2
+  - assetName: Ground_Plane_40x02x40
+    assetQuantity: 4
+  - assetName: Crate_2x1x1_Large
+    assetQuantity: 2
+  - assetName: Barrel_Old
+    assetQuantity: 1
+  - assetName: Cone_Blank
+    assetQuantity: 1
