@@ -10,6 +10,7 @@ public class CoinScript : MonoBehaviour
     public int CoinWeight;//weight of this coin for the second puzzle
     public bool IsFake;//is this a real or fake coin for the first puzzle
     Text CoinValue;//coin value will match the weight
+    public GameObject CollidedObject;//object that has collided with the coin that is tagged with 
     private void Awake()
     {
         CoinValue = GetComponent<Text>();
@@ -23,5 +24,14 @@ public class CoinScript : MonoBehaviour
         CoinValue.text = CoinWeight.ToString();
     }
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "EnScale")
+        {
+            CollidedObject = collision.gameObject;
+            GetComponent<CoinUpdaterScript>().enabled = true;
+
+        }
+
+    }
 }

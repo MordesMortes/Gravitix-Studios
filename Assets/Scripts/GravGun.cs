@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR; //added to code by richard because we want to use steamVr controller buttons
 
 /* "Gravity Gun" script I quickly threw together to help another user out on Reddit.
  * When clicking the mouse button, you will grab a rigidbody object in front of the
@@ -52,9 +53,9 @@ public class GravGun : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetMouseButton(0))
+        if (!Input.GetButtonDown("grip"))//altered to use unity keybinds instead of a direct refference to a mouse button -Richard
         {
-            // We are not holding the mouse button. Release the object and return before checking for a new one
+            // We are not holding the grip button. Release the object and return before checking for a new one
 
             if (rigidbody != null)
             {
