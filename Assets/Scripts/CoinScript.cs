@@ -10,6 +10,7 @@ public class CoinScript : MonoBehaviour
     public int CoinWeight;//weight of this coin for the second puzzle
     public bool IsFake;//is this a real or fake coin for the first puzzle
     Text CoinValue;//coin value will match the weight
+    [HideInInspector]
     public GameObject CollidedObject;//object that has collided with the coin that is tagged with 
     private void Awake()
     {
