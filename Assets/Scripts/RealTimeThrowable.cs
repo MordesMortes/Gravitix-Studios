@@ -6,14 +6,18 @@ using Valve.VR.InteractionSystem;
 
 public class RealTimeThrowable : Throwable
 {
-    private RealtimeTransform rtTransform;
+    
     RealtimeView rtView;
+    //[HideInInspector]
     public int Ownership = -1;
+    [HideInInspector]
+    public RealtimeTransform rtTransform;
     // Start is called before the first frame update
     void Start()
     {
         rtTransform = gameObject.GetComponent<RealtimeTransform>();
         rtView = gameObject.GetComponent<RealtimeView>();
+        
     }
     protected override void OnHandHoverBegin(Hand hand)
     {
