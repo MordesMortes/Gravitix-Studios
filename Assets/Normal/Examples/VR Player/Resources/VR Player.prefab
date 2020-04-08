@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 114879240156072798}
   - component: {fileID: 114800176784454794}
   - component: {fileID: 114272718057082298}
-  - component: {fileID: 6764167996449993675}
+  - component: {fileID: 1999681838776419677}
   m_Layer: 0
   m_Name: VR Player
   m_TagString: Untagged
@@ -366,7 +366,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 1
   _extrapolation: 0
---- !u!114 &6764167996449993675
+--- !u!114 &1999681838776419677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,14 +375,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1435502846325602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20606077e8047b4e908d5e49513553a, type: 3}
+  m_Script: {fileID: 11500000, guid: ca95141986a66aa48b14367a9285ba5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactDist: 50
   HoldPosition: {fileID: 4369254572010764}
   attractSpeed: 5
-  minThrowForce: 0.01
-  maxThrowForce: 0.1
+  minThrowForce: 0
+  maxThrowForce: 0
   Ownership: -1
 --- !u!1 &1573471737031190
 GameObject:

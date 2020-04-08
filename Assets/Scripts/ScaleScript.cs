@@ -10,8 +10,10 @@ public class ScaleScript : MonoBehaviour
     public bool RightScale;//indicates this is the right scale
     Text Display;// The value that displays on the cube
     int CoinWeight;
+    MeshRenderer MyRend;//meshrenderer to change colours for testing
     private void Start()
     {
+        MyRend = gameObject.GetComponent<MeshRenderer>();
         Display = gameObject.GetComponent<Text>();
         CoinWeight = 0;
     }
@@ -29,6 +31,10 @@ public class ScaleScript : MonoBehaviour
             CoinWeight = CoinWeight + collision.gameObject.GetComponent<CoinScript>().CoinWeight;
             Display.text = CoinWeight.ToString();
         }
+        if (collision.gameObject.GetComponent<CoinScript>().IsFake)
+        {
+            MyRend.material.color = Random.ColorHSV();
+        }
     }
     private void OnCollisionExit(Collision collision)
     {
@@ -36,6 +42,10 @@ public class ScaleScript : MonoBehaviour
         {
             CoinWeight = CoinWeight - collision.gameObject.GetComponent<CoinScript>().CoinWeight;
             Display.text = CoinWeight.ToString();
+        }
+        if (collision.gameObject.GetComponent<CoinScript>().IsFake)
+        {
+            MyRend.material.color = Color.grey;
         }
     }
     public int ScaleValue()
