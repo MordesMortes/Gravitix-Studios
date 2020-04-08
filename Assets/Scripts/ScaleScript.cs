@@ -6,19 +6,55 @@ using UnityEngine.UI;
 public class ScaleScript : MonoBehaviour
 
 {
+    public bool LeftScale;//indicates this is the left scale
+    public bool RightScale;//indicates this is the right scale
     Text Display;// The value that displays on the cube
+    int CoinWeight;
     private void Start()
     {
         Display = gameObject.GetComponent<Text>();
+        CoinWeight = 0;
     }
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        int weight = collision.gameObject.GetComponent<CoinScript>().CoinWeight;
-        ScaleValue(weight);
+        if (CoinWeight == 0)
+
+        {
+            CoinWeight = collision.gameObject.GetComponent<CoinScript>().CoinWeight;
+            Display.text = CoinWeight.ToString();
+            
+        }
+        if (CoinWeight !=0)
+        {
+            CoinWeight = CoinWeight + collision.gameObject.GetComponent<CoinScript>().CoinWeight;
+            Display.text = CoinWeight.ToString();
+        }
     }
-    public int ScaleValue(int weight)
-    {   
-        Debug.Log(weight.ToString());
-        return weight;       
+    private void OnCollisionExit(Collision collision)
+    {
+        if (CoinWeight != 0)
+        {
+            CoinWeight = CoinWeight - collision.gameObject.GetComponent<CoinScript>().CoinWeight;
+            Display.text = CoinWeight.ToString();
+        }
+    }
+    public int ScaleValue()
+    {
+        if (LeftScale)
+        {
+            Debug.Log(CoinWeight.ToString());
+            return CoinWeight;
+        }
+        if (RightScale)
+        {
+            CoinWeight = CoinWeight  * -1;
+            Debug.Log(CoinWeight.ToString());
+            return CoinWeight;
+        }
+        else
+        {
+            Debug.Log("you need to set the sides of the scales");
+            return 0;
+        }
     }
 }

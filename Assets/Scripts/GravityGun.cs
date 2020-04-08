@@ -41,17 +41,18 @@ public class GravityGun : MonoBehaviour
         if (SteamVR_Actions.default_GrabGrip.GetStateDown(SteamVR_Input_Sources.Any) && !hasObject)
         {
             DoRay();
+            
         }
 
-        if (SteamVR_Actions.default_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any) && hasObject)
-        {
-            throwForce += 0.1f;
-        }
+        //if (SteamVR_Actions.default_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any) && hasObject)
+        //{
+        //    throwForce += 0.1f;
+        //}
 
-        if (SteamVR_Actions.default_GrabPinch.GetStateUp(SteamVR_Input_Sources.Any) && hasObject)
-        {
-            ShootObj();
-        }
+        //if (SteamVR_Actions.default_GrabPinch.GetStateUp(SteamVR_Input_Sources.Any) && hasObject)
+        //{
+        //    ShootObj();
+        //}
 
         if(SteamVR_Actions.default_GrabGrip.GetStateUp(SteamVR_Input_Sources.Any) && hasObject)
         {

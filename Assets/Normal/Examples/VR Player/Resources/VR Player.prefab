@@ -381,8 +381,8 @@ MonoBehaviour:
   interactDist: 50
   HoldPosition: {fileID: 4369254572010764}
   attractSpeed: 5
-  minThrowForce: 0
-  maxThrowForce: 0
+  minThrowForce: 0.01
+  maxThrowForce: 0.1
   Ownership: -1
 --- !u!1 &1573471737031190
 GameObject:
@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 4501054940117704}
   - component: {fileID: 33019732518430544}
   - component: {fileID: 23915046626809702}
+  - component: {fileID: 4000115294722238599}
   m_Layer: 0
   m_Name: LeftHandModel
   m_TagString: Untagged
@@ -462,6 +463,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4000115294722238599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573471737031190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pose: {fileID: 0}
+  interactWithUI:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 0
+  active: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  thickness: 0.002
+  clickColor: {r: 0, g: 1, b: 0, a: 1}
+  holder: {fileID: 0}
+  pointer: {fileID: 0}
+  addRigidBody: 0
+  reference: {fileID: 0}
 --- !u!1 &1677690864260768
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +571,7 @@ GameObject:
   - component: {fileID: 4798741242481448}
   - component: {fileID: 33180042161753754}
   - component: {fileID: 23206906674170422}
+  - component: {fileID: 1121856578948620710}
   m_Layer: 0
   m_Name: RightHandModel
   m_TagString: Untagged
@@ -613,6 +639,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1121856578948620710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681626021449142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pose: {fileID: 0}
+  interactWithUI:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 0
+  active: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  thickness: 0.002
+  clickColor: {r: 0, g: 1, b: 0, a: 1}
+  holder: {fileID: 0}
+  pointer: {fileID: 0}
+  addRigidBody: 0
+  reference: {fileID: 0}
 --- !u!1 &1946431626971230
 GameObject:
   m_ObjectHideFlags: 0
