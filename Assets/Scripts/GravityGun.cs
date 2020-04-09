@@ -25,15 +25,15 @@ public class GravityGun : MonoBehaviour
     private bool hasObject = false;
     
     
-    public int Ownership = -1;//setting ownership for normcore as it wasn't recognising the raycast as imparting ownership --Richard
-    RealtimeTransform RTTransform;//reatime transform to grab ownership for the raycast --Richard
+    //public int Ownership = -1;//setting ownership for normcore as it wasn't recognising the raycast as imparting ownership --Richard
+    //RealtimeTransform RTTransform;//reatime transform to grab ownership for the raycast --Richard
 
 
 
     private void Start()
     {
         throwForce = minThrowForce;
-        RTTransform = gameObject.GetComponent<RealtimeTransform>();
+        //RTTransform = gameObject.GetComponent<RealtimeTransform>();
     }
 
     private void Update()
@@ -44,15 +44,15 @@ public class GravityGun : MonoBehaviour
             
         }
 
-        //if (SteamVR_Actions.default_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any) && hasObject)
-        //{
-        //    throwForce += 0.1f;
-        //}
+        if (SteamVR_Actions.default_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any) && hasObject)
+        {
+            throwForce += 0.1f;
+        }
 
-        //if (SteamVR_Actions.default_GrabPinch.GetStateUp(SteamVR_Input_Sources.Any) && hasObject)
-        //{
-        //    ShootObj();
-        //}
+        if (SteamVR_Actions.default_GrabPinch.GetStateUp(SteamVR_Input_Sources.Any) && hasObject)
+        {
+            ShootObj();
+        }
 
         if(SteamVR_Actions.default_GrabGrip.GetStateUp(SteamVR_Input_Sources.Any) && hasObject)
         {
@@ -92,7 +92,7 @@ public class GravityGun : MonoBehaviour
     }
 
 
-    //----------------Functinoal Stuff
+    //----------------Functional Stuff
 
     public float CheckDist()
     {
@@ -107,6 +107,7 @@ public class GravityGun : MonoBehaviour
 
     private void DropObj()
     {
+        //objectRB.velocity = Vector3.zero;
         objectRB.constraints = RigidbodyConstraints.None;
         objectIHave.transform.SetParent(null, false); //edited to setParent from parent as it was yeeting cubes into orbit -Richard
         objectIHave = null;
@@ -135,7 +136,7 @@ public class GravityGun : MonoBehaviour
                 
                 objectIHave = hit.collider.gameObject;
                 objectIHave.transform.SetParent(HoldPosition);
-                objectIHave.GetComponent<RealTimeThrowable>().Grabbed();
+                //objectIHave.GetComponent<RealTimeThrowable>().Grabbed();
                 objectRB = objectIHave.GetComponent<Rigidbody>();
                 objectRB.constraints = RigidbodyConstraints.FreezeAll;
 

@@ -9,7 +9,8 @@ public class ScaleScript : MonoBehaviour
     public bool LeftScale;//indicates this is the left scale
     public bool RightScale;//indicates this is the right scale
     Text Display;// The value that displays on the cube
-    int CoinWeight;
+    [HideInInspector]
+    public int CoinWeight;
     MeshRenderer MyRend;//meshrenderer to change colours for testing
     private void Start()
     {
