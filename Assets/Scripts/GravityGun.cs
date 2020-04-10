@@ -109,7 +109,8 @@ public class GravityGun : MonoBehaviour
     {
         //objectRB.velocity = Vector3.zero;
         objectRB.constraints = RigidbodyConstraints.None;
-        objectIHave.transform.SetParent(null, false); //edited to setParent from parent as it was yeeting cubes into orbit -Richard
+        //objectIHave.transform.SetParent(null, false); //edited to setParent from parent as it was yeeting cubes into orbit -Richard
+        objectIHave.transform.parent = null;
         objectIHave = null;
         hasObject = false;
     }
@@ -131,18 +132,25 @@ public class GravityGun : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDist))
         {
             
-            if (hit.collider.CompareTag("Block"))
+            if (hit.collider.CompareTag("Block") && hit.collider.GetComponent<RealTimeThrowable>())
             {
                 
                 objectIHave = hit.collider.gameObject;
-                objectIHave.transform.SetParent(HoldPosition);
-                //objectIHave.GetComponent<RealTimeThrowable>().Grabbed();
+                objectIHave.transform.SetParent(HoldPosition);                
                 objectRB = objectIHave.GetComponent<Rigidbody>();
                 objectRB.constraints = RigidbodyConstraints.FreezeAll;
-
+                objectIHave.GetComponent<RealTimeThrowable>().Grabbed();
                 hasObject = true;
 
                 CalculateRotVector();
+            }
+            if (hit.collider.CompareTag("Block") && !hit.collider.GetComponent<RealTimeThrowable>())
+            {
+                objectIHave = hit.collider.gameObject;
+                objectIHave.transform.SetParent(HoldPosition);
+                objectRB = objectIHave.GetComponent<Rigidbody>();
+                objectRB.constraints = RigidbodyConstraints.FreezeAll;
+                hasObject = true;
             }
         }
 
