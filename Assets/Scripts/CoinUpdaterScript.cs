@@ -6,7 +6,7 @@ public class CoinUpdaterScript : MonoBehaviour
 {
     GameObject TargetObject;//the gameobject that the coin is linked to to determine its size
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         TargetObject = GetComponent<CoinScript>().CollidedObject;
     }
