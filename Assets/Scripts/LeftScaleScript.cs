@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScaleScript : MonoBehaviour
+public class LeftScaleScript : MonoBehaviour
 
 {
-    public bool LeftScale;//indicates this is the left scale
-    public bool RightScale;//indicates this is the right scale
+    public GameObject ScaleDisplay;//the object that displays the scales value.
     Text Display;// The value that displays on the cube
     [HideInInspector]
     public int CoinWeight;
@@ -20,18 +19,12 @@ public class ScaleScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (CoinWeight == 0)
-
-        {
-            CoinWeight = collision.gameObject.GetComponent<CoinScript>().CoinWeight;
-            Display.text = CoinWeight.ToString();
-            
-        }
-        if (CoinWeight !=0)
-        {
+        
             CoinWeight = CoinWeight + collision.gameObject.GetComponent<CoinScript>().CoinWeight;
             Display.text = CoinWeight.ToString();
-        }
+            ScaleDisplay.gameObject.GetComponent<ScaleDisplayScript>().Weigh();
+
+        
         if (collision.gameObject.GetComponent<CoinScript>().IsFake)
         {
             MyRend.material.color = Random.ColorHSV();
@@ -43,29 +36,14 @@ public class ScaleScript : MonoBehaviour
         {
             CoinWeight = CoinWeight - collision.gameObject.GetComponent<CoinScript>().CoinWeight;
             Display.text = CoinWeight.ToString();
+            ScaleDisplay.gameObject.GetComponent<ScaleDisplayScript>().Weigh();
+
         }
         if (collision.gameObject.GetComponent<CoinScript>().IsFake)
         {
             MyRend.material.color = Color.grey;
         }
     }
-    public int ScaleValue()
-    {
-        if (LeftScale)
-        {
-            Debug.Log(CoinWeight.ToString());
-            return CoinWeight;
-        }
-        if (RightScale)
-        {
-            CoinWeight = CoinWeight  * -1;
-            Debug.Log(CoinWeight.ToString());
-            return CoinWeight;
-        }
-        else
-        {
-            Debug.Log("you need to set the sides of the scales");
-            return 0;
-        }
-    }
+    
+    
 }

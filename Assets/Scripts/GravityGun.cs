@@ -23,17 +23,14 @@ public class GravityGun : MonoBehaviour
     private Vector3 rotateVector = Vector3.one;
 
     private bool hasObject = false;
+    Vector3 InitialPosition;//initial position of player holding gravity gun for respawning 
     
-    
-    //public int Ownership = -1;//setting ownership for normcore as it wasn't recognising the raycast as imparting ownership --Richard
-    //RealtimeTransform RTTransform;//reatime transform to grab ownership for the raycast --Richard
-
-
 
     private void Start()
     {
         throwForce = minThrowForce;
-        //RTTransform = gameObject.GetComponent<RealtimeTransform>();
+        InitialPosition = gameObject.transform.position;
+        
     }
 
     private void Update()
@@ -109,7 +106,8 @@ public class GravityGun : MonoBehaviour
     {
         //objectRB.velocity = Vector3.zero;
         objectRB.constraints = RigidbodyConstraints.None;
-        objectIHave.transform.SetParent(null, false); //edited to setParent from parent as it was yeeting cubes into orbit -Richard
+        //objectIHave.transform.SetParent(null, false); //edited to setParent from parent as it was yeeting cubes into orbit -Richard
+        objectIHave.transform.parent = null;
         objectIHave = null;
         hasObject = false;
     }
@@ -131,22 +129,32 @@ public class GravityGun : MonoBehaviour
         if (Physics.Raycast(ray, out hit, interactDist))
         {
             
-            if (hit.collider.CompareTag("Block"))
+            if (hit.collider.CompareTag("Block") && hit.collider.GetComponent<RealTimeThrowable>())
             {
                 
                 objectIHave = hit.collider.gameObject;
-                objectIHave.transform.SetParent(HoldPosition);
-                //objectIHave.GetComponent<RealTimeThrowable>().Grabbed();
+                objectIHave.transform.SetParent(HoldPosition);                
                 objectRB = objectIHave.GetComponent<Rigidbody>();
                 objectRB.constraints = RigidbodyConstraints.FreezeAll;
-
+                objectIHave.GetComponent<RealTimeThrowable>().Grabbed();
                 hasObject = true;
 
                 CalculateRotVector();
             }
+            if (hit.collider.CompareTag("Block") && !hit.collider.GetComponent<RealTimeThrowable>())
+            {
+                objectIHave = hit.collider.gameObject;
+                objectIHave.transform.SetParent(HoldPosition);
+                objectRB = objectIHave.GetComponent<Rigidbody>();
+                objectRB.constraints = RigidbodyConstraints.FreezeAll;
+                hasObject = true;
+            }
         }
 
     }
-   
+   public void ReSpawn()
+    {
+        gameObject.transform.position = InitialPosition;
+    }
     
 }

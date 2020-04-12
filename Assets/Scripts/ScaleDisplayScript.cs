@@ -14,8 +14,13 @@ public class ScaleDisplayScript : MonoBehaviour
     }
     public int Weigh()
     {
-        int weight = LeftScale.GetComponent<ScaleScript>().CoinWeight + RightScale.GetComponent<ScaleScript>().CoinWeight;
+        int weight = LeftScale.GetComponent<LeftScaleScript>().CoinWeight - RightScale.GetComponent<RightScaleScript>().CoinWeight;
+        if (weight <= 0)
+        {
+            weight = weight * -1;
+        }
         Debug.Log("the weight is " + weight.ToString());
+        Display.text = weight.ToString();
         return weight;
     }
 }
