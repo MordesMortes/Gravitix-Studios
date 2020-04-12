@@ -10,6 +10,6 @@ public class Block : MonoBehaviour
     private void Start()
     {
         myRend = GetComponent<MeshRenderer>();
-        myRend.material.color = Random.ColorHSV();
+        myRend.material.SetColor("_BaseColor",Random.ColorHSV());
     }
 }
