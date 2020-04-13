@@ -385,6 +385,7 @@ MonoBehaviour:
   attractSpeed: 5
   minThrowForce: 0
   maxThrowForce: 0
+  player: {fileID: 1435502846325602}
 --- !u!1 &1573471737031190
 GameObject:
   m_ObjectHideFlags: 0
