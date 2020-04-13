@@ -777,6 +777,18 @@ PrefabInstance:
       objectReference: {fileID: 1430568251}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fca9d4afb3743274e8f7da14019d7e0b, type: 3}
+--- !u!114 &36478937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114501696213753918, guid: fca9d4afb3743274e8f7da14019d7e0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 36478936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dcaba2234393f4a829d0fd1fb4a608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &38154143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7324,7 +7336,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -13.703831, y: 4.31882, z: -6.051605}
+  m_ConnectedAnchor: {x: -14.004297, y: 4.31882, z: -6.051605}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -10775,7 +10787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549482456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.4304667, y: -3.344334, z: -3.1356115}
+  m_LocalPosition: {x: -6.4304667, y: -3.19, z: 0.9}
   m_LocalScale: {x: 0.32793, y: 0.32793, z: 0.32793}
   m_Children:
   - {fileID: 1744953823}
@@ -12400,7 +12412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _realtime: {fileID: 0}
+  _realtime: {fileID: 36478937}
   _sceneViewUUID: 23eb07b349af114cbc3d6bc9198af2ed
   _sceneViewOwnedByCreatingClient: 0
   _sceneViewPreventOwnershipTakeover: 0
@@ -17066,7 +17078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _realtime: {fileID: 0}
+  _realtime: {fileID: 36478937}
   _sceneViewUUID: 99b4be68ce0d854296014bb0f57b736e
   _sceneViewOwnedByCreatingClient: 0
   _sceneViewPreventOwnershipTakeover: 0
@@ -20701,7 +20713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _realtime: {fileID: 0}
+  _realtime: {fileID: 36478937}
   _sceneViewUUID: 030724f0128c004c891a70f40dfe5c06
   _sceneViewOwnedByCreatingClient: 0
   _sceneViewPreventOwnershipTakeover: 0
@@ -27479,7 +27491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _realtime: {fileID: 0}
+  _realtime: {fileID: 36478937}
   _sceneViewUUID: 5b5fbe4e0ca4604f9ab4dc3e97284aa2
   _sceneViewOwnedByCreatingClient: 0
   _sceneViewPreventOwnershipTakeover: 0
@@ -29142,7 +29154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381833301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6804667, y: -2.123834, z: -1.3346114}
+  m_LocalPosition: {x: -5.6804667, y: -2.388, z: -1.3346114}
   m_LocalScale: {x: 0.45211077, y: 0.45211077, z: 0.45211077}
   m_Children:
   - {fileID: 2012513008}
@@ -34558,7 +34570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _realtime: {fileID: 0}
+  _realtime: {fileID: 36478937}
   _sceneViewUUID: 049004a7b4a12042ac97e17a40e2e677
   _sceneViewOwnedByCreatingClient: 0
   _sceneViewPreventOwnershipTakeover: 0
@@ -35726,7 +35738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _realtime: {fileID: 0}
+  _realtime: {fileID: 36478937}
   _sceneViewUUID: aa6452ef635b8247abe8604f43532986
   _sceneViewOwnedByCreatingClient: 1
   _sceneViewPreventOwnershipTakeover: 0
@@ -37025,7 +37037,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1809684630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae393db7bac4fe47a2b1ea31d027f3c, type: 3}
+  m_Script: {fileID: 11500000, guid: 037fc3e171b97c44da6bbae64c8e6b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!64 &1809684632
@@ -39603,7 +39615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _realtime: {fileID: 0}
+  _realtime: {fileID: 36478937}
   _sceneViewUUID: 282c9f0fdfcbcf4cb6ea40a6cc6a82b5
   _sceneViewOwnedByCreatingClient: 0
   _sceneViewPreventOwnershipTakeover: 0
@@ -40291,7 +40303,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2012513007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5defc96b832744c9028c565a1fcfa5, type: 3}
+  m_Script: {fileID: 11500000, guid: a429c28046e8fc44f87cec35f1f7f432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScaleDisplay: {fileID: 1522618857}
@@ -41955,7 +41967,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2085010892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a89a4e6b1c7534fb50fad0cea7ad1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 07bd301b439dba3419a431ff76fde9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScaleDisplay: {fileID: 1522618857}
