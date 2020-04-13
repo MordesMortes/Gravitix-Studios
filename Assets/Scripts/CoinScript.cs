@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Normal.Realtime;
 
 public class CoinScript : MonoBehaviour
     
@@ -12,10 +13,15 @@ public class CoinScript : MonoBehaviour
     public bool IsFake;//is this a real or fake coin for the first puzzle
     Text CoinValue;//coin value will match the weight
     bool SizeToggle = false; //toggle for if the object is getting resized
+    Vector3 Initialposition;//initial position of gameobject
+    Quaternion InitialRotation;//initial rotation of gameobject
     [HideInInspector]
-    public GameObject CollidedObject;//object that has collided with the coin that is tagged with 
+    public GameObject CollidedObject;//object that has collided with the coin that is tagged with
+    public RealtimeAvatarManager _avatarManager;//gets all the avatars of the players
     private void Start()
-    {
+    {        
+        Initialposition = gameObject.transform.position;
+        InitialRotation = gameObject.transform.rotation;
         CoinValue = GetComponent<Text>();
         if (IsFake)
         {
@@ -32,8 +38,13 @@ public class CoinScript : MonoBehaviour
         
         if (IsFake == false)
         {
+            gameObject.transform.position = Initialposition;
+            gameObject.transform.rotation = InitialRotation;
+            foreach (var item in _avatarManager.avatars)
+            {
+                gameObject.GetComponent<GravityGun>().ReSpawn();
+            }
             
-            SceneManager.LoadScene("testing");
             return false;
         }
         if (IsFake == true)

@@ -23,17 +23,14 @@ public class GravityGun : MonoBehaviour
     private Vector3 rotateVector = Vector3.one;
 
     private bool hasObject = false;
+    Vector3 InitialPosition;//initial position of player holding gravity gun for respawning 
     
-    
-    //public int Ownership = -1;//setting ownership for normcore as it wasn't recognising the raycast as imparting ownership --Richard
-    //RealtimeTransform RTTransform;//reatime transform to grab ownership for the raycast --Richard
-
-
 
     private void Start()
     {
         throwForce = minThrowForce;
-        //RTTransform = gameObject.GetComponent<RealtimeTransform>();
+        InitialPosition = gameObject.transform.position;
+        
     }
 
     private void Update()
@@ -155,6 +152,9 @@ public class GravityGun : MonoBehaviour
         }
 
     }
-   
+   public void ReSpawn()
+    {
+        gameObject.transform.position = InitialPosition;
+    }
     
 }
