@@ -17,9 +17,10 @@ public class CoinScript : MonoBehaviour
     Quaternion InitialRotation;//initial rotation of gameobject
     [HideInInspector]
     public GameObject CollidedObject;//object that has collided with the coin that is tagged with
-    public RealtimeAvatarManager _avatarManager;//gets all the avatars of the players
+    RealtimeAvatarManager _avatarManager;//gets all the avatars of the players
     private void Start()
-    {        
+    {
+        _avatarManager = FindObjectOfType<RealtimeAvatarManager>();
         Initialposition = gameObject.transform.position;
         InitialRotation = gameObject.transform.rotation;
         CoinValue = GetComponent<Text>();
@@ -42,10 +43,11 @@ public class CoinScript : MonoBehaviour
             gameObject.transform.rotation = InitialRotation;
             foreach (var item in _avatarManager.avatars)
             {
-                gameObject.GetComponent<GravityGun>().ReSpawn();
+                _avatarManager.avatars[item.Key].gameObject.GetComponent<GravityGun>().ReSpawn();
             }
             
             return false;
+            
         }
         if (IsFake == true)
         {

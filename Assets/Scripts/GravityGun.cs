@@ -24,12 +24,13 @@ public class GravityGun : MonoBehaviour
 
     private bool hasObject = false;
     Vector3 InitialPosition;//initial position of player holding gravity gun for respawning 
-    
+    GameObject player;//the player in the scene 
 
     private void Start()
     {
         throwForce = minThrowForce;
-        InitialPosition = gameObject.transform.position;
+        InitialPosition = FindObjectOfType<Player>().transform.position;
+        player = FindObjectOfType<Player>().gameObject;
         
     }
 
@@ -104,9 +105,7 @@ public class GravityGun : MonoBehaviour
 
     private void DropObj()
     {
-        //objectRB.velocity = Vector3.zero;
         objectRB.constraints = RigidbodyConstraints.None;
-        //objectIHave.transform.SetParent(null, false); //edited to setParent from parent as it was yeeting cubes into orbit -Richard
         objectIHave.transform.parent = null;
         objectIHave = null;
         hasObject = false;
@@ -122,7 +121,7 @@ public class GravityGun : MonoBehaviour
 
     private void DoRay()
     {
-        //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //Ray ray = cam.ScreenPointToRay(Input.mousePosition);//works for 3d games not for VR
         Ray ray = new Ray(HoldPosition.position, HoldPosition.forward);
         RaycastHit hit;
 
@@ -153,8 +152,8 @@ public class GravityGun : MonoBehaviour
 
     }
    public void ReSpawn()
-    {
-        gameObject.transform.position = InitialPosition;
+    {        
+        player.transform.position = InitialPosition;
     }
     
 }
