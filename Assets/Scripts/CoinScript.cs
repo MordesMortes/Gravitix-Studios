@@ -52,6 +52,7 @@ public class CoinScript : MonoBehaviour
         if (IsFake == true)
         {
             Destroy(gameObject, 3f);
+            
             return true;
         }
         else 
@@ -78,5 +79,10 @@ public class CoinScript : MonoBehaviour
      public void EnMass()
     {
         GetComponent<Rigidbody>().mass = CoinWeight;
+    }
+
+    private void OnDestroy()
+    {
+        gameObject.GetComponentInParent<GravityGun>().DropObj();
     }
 }

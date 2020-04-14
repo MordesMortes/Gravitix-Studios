@@ -103,7 +103,7 @@ public class GravityGun : MonoBehaviour
         objectIHave.transform.position = Vector3.Lerp(objectIHave.transform.position, HoldPosition.position, attractSpeed * Time.deltaTime);
     }
 
-    private void DropObj()
+    public void DropObj()//changed to public so fake cube is dropped if it collides with testbench preventing the object being held while it is destroyed.
     {
         objectRB.constraints = RigidbodyConstraints.None;
         objectIHave.transform.parent = null;
