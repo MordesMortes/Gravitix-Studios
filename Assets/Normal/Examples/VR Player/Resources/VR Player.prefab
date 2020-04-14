@@ -385,7 +385,6 @@ MonoBehaviour:
   attractSpeed: 5
   minThrowForce: 0
   maxThrowForce: 0
-  player: {fileID: 1435502846325602}
 --- !u!1 &1573471737031190
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +489,7 @@ MonoBehaviour:
   holder: {fileID: 0}
   pointer: {fileID: 0}
   addRigidBody: 0
-  reference: {fileID: 0}
+  reference: {fileID: 4501054940117704}
 --- !u!1 &1677690864260768
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +666,7 @@ MonoBehaviour:
   holder: {fileID: 0}
   pointer: {fileID: 0}
   addRigidBody: 0
-  reference: {fileID: 0}
+  reference: {fileID: 4798741242481448}
 --- !u!1 &1946431626971230
 GameObject:
   m_ObjectHideFlags: 0
