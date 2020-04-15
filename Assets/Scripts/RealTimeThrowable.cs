@@ -19,7 +19,7 @@ public class RealTimeThrowable : Throwable
         rtView = gameObject.GetComponent<RealtimeView>();
         
     }
-    protected override void OnHandHoverBegin(Hand hand)
+    protected override void HandHoverUpdate(Hand hand)
     {
         GrabTypes bestGrabType = hand.GetBestGrabbingType();
 
