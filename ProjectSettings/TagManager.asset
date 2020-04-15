@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Block
   - Realtime
+  - test
   layers:
   - Default
   - TransparentFX
