@@ -6,8 +6,11 @@ public class TestBenchScript : MonoBehaviour
 {
     public GameObject RealtimeCubes;//the hidden realitime cubes folder to be set active
     public GameObject[] NonRealtimeCubes;//the folder of the non realtime cubes to be set inactive
-    public GameObject FancyScales;//the fancy scales that use physics for the first puzzle
+    public GameObject BalanceScales;//the fancy scales that use physics for the first puzzle
     public GameObject RealtimeScales;//the scale for the realtime cubes as they dislike physics
+    public AudioSource Sound;//audio source
+    public AudioClip Disapointment;//the sound file that indicates failure
+    public AudioClip Success;//the sound that indicates success
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Block"))
@@ -19,7 +22,7 @@ public class TestBenchScript : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().Sleep();
                 gameObject.GetComponent<Rigidbody>().detectCollisions = false;
                 RealtimeCubes.SetActive(true);
-                FancyScales.SetActive(false);
+                BalanceScales.SetActive(false);
                 RealtimeScales.SetActive(true);
                 for (int i = 0; i < NonRealtimeCubes.Length; i++)
                 {
@@ -30,7 +33,21 @@ public class TestBenchScript : MonoBehaviour
                 {                    
                     FindObjectsOfType<CoinScript>()[i].EnMass();
                 }
+                Sound.clip = Success;
+                Sound.Play();
 
+            }
+            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == false)
+            { 
+               
+                for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)
+                {
+                    FindObjectsOfType<CoinScript>()[i].Return();                   
+                } 
+                BalanceScales.SetActive(false);
+                gameObject.SetActive(false);
+                Sound.clip = Disapointment;
+                Sound.Play();
             }
         }
     }

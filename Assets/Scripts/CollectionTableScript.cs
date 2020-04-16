@@ -6,6 +6,8 @@ public class CollectionTableScript : MonoBehaviour
 {
     int Blockcount;
     public GameObject BalanceScales;
+    public AudioSource Success;//success sound
+    public AudioSource Dissapointment;//failure sound
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Block"))

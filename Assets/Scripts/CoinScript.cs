@@ -85,4 +85,10 @@ public class CoinScript : MonoBehaviour
     {
         gameObject.GetComponentInParent<GravityGun>().DropObj();
     }
+
+    public void Return()
+    {
+        gameObject.transform.position = Initialposition;
+        gameObject.transform.rotation = InitialRotation;
+    }
 }
