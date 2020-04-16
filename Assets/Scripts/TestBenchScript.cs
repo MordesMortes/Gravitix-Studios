@@ -19,11 +19,11 @@ public class TestBenchScript : MonoBehaviour
                 gameObject.GetComponent<Rigidbody>().Sleep();
                 gameObject.GetComponent<Rigidbody>().detectCollisions = false;
                 RealtimeCubes.SetActive(true);
-                //NonRealtimeCubes.SetActive(false);
                 FancyScales.SetActive(false);
                 RealtimeScales.SetActive(true);
                 for (int i = 0; i < NonRealtimeCubes.Length; i++)
                 {
+                    //NonRealtimeCubes[i].GetComponent<Block>().Shade("Dissolve");//adds Dissolve shader 
                     NonRealtimeCubes[i].SetActive(false);
                 }
                 for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)

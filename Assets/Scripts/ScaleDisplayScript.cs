@@ -8,9 +8,11 @@ public class ScaleDisplayScript : MonoBehaviour
     public GameObject LeftScale;//gameobject of the left scale
     public GameObject RightScale;//gameobject of the right scale
     private int FinalScore;
+    Text Display;
     private void Start()
     {
-        FinalScore = Random.Range(1, 41);   
+        FinalScore = Random.Range(1, 41);
+        Display = gameObject.GetComponentInChildren<Text>();
     }
 
     public int Weigh()
