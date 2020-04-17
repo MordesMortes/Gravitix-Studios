@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CollectionTableScript : MonoBehaviour
 {
-    int Blockcount;
+    [HideInInspector]
+    public int Blockcount;
     public GameObject BalanceScales;
     public AudioSource Success;//success sound
     public AudioSource Dissapointment;//failure sound

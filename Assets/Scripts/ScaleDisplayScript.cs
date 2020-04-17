@@ -35,8 +35,7 @@ public class ScaleDisplayScript : MonoBehaviour
         }
         DisplayWeight.SetText(weight.ToString());
         if (weight == FinalScore)
-        {
-            Debug.Log("you have matched the score weight of " + FinalScore.ToString());//testing message remove on cleanup
+        {           
             Display.SetText("Yay you can add and subtract mommy and daddy must be so proud");
             DisplayWeight.SetText("The other person did all the math for you didn't they");
             AudioSource.clip = Success;
