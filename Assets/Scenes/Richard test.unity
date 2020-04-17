@@ -3502,8 +3502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 3
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!114 &140923193
 MonoBehaviour:
@@ -4287,7 +4285,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.109375, y: 0.0390625, z: 0.0390625, w: -0.0390625}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6258,7 +6256,6 @@ GameObject:
   - component: {fileID: 256064335}
   - component: {fileID: 256064334}
   - component: {fileID: 256064333}
-  - component: {fileID: 256064332}
   - component: {fileID: 256064331}
   - component: {fileID: 256064330}
   - component: {fileID: 256064329}
@@ -6436,21 +6433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 9
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
---- !u!114 &256064332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256064325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &256064333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8306,8 +8289,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 9
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!114 &367511966
 MonoBehaviour:
@@ -10691,7 +10672,6 @@ GameObject:
   - component: {fileID: 470151917}
   - component: {fileID: 470151916}
   - component: {fileID: 470151915}
-  - component: {fileID: 470151914}
   - component: {fileID: 470151913}
   - component: {fileID: 470151912}
   - component: {fileID: 470151911}
@@ -10869,21 +10849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 27
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
---- !u!114 &470151914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470151907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &470151915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14711,7 +14677,6 @@ GameObject:
   - component: {fileID: 679599604}
   - component: {fileID: 679599603}
   - component: {fileID: 679599602}
-  - component: {fileID: 679599601}
   - component: {fileID: 679599600}
   - component: {fileID: 679599599}
   - component: {fileID: 679599598}
@@ -14889,21 +14854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 3
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
---- !u!114 &679599601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679599594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &679599602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16951,8 +16902,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 27
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!114 &739837885
 MonoBehaviour:
@@ -18821,8 +18770,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 3
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!114 &826807483
 MonoBehaviour:
@@ -22720,8 +22667,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 27
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!54 &1030886964
 Rigidbody:
@@ -25172,8 +25117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 5
   IsFake: 1
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!114 &1131172170
 MonoBehaviour:
@@ -29907,8 +29850,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 9
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!54 &1312487612
 Rigidbody:
@@ -35056,8 +34997,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 1
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!4 &1593022028 stripped
 Transform:
@@ -36938,8 +36877,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 5
   IsFake: 1
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!114 &1663085786
 MonoBehaviour:
@@ -38866,8 +38803,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 1
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
 --- !u!54 &1744953828
 Rigidbody:
@@ -45246,13 +45181,11 @@ GameObject:
   - component: {fileID: 2075048822}
   - component: {fileID: 2075048821}
   - component: {fileID: 2075048820}
-  - component: {fileID: 2075048819}
   - component: {fileID: 2075048818}
   - component: {fileID: 2075048817}
   - component: {fileID: 2075048816}
   - component: {fileID: 2075048815}
   - component: {fileID: 2075048814}
-  - component: {fileID: 2075048826}
   - component: {fileID: 2075048825}
   - component: {fileID: 2075048824}
   - component: {fileID: 2075048823}
@@ -45425,21 +45358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinWeight: 1
   IsFake: 0
-  OwnedByPlayer1: 0
-  OwnedByPlayer2: 0
   CollidedObject: {fileID: 0}
---- !u!114 &2075048819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075048812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2075048820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45546,7 +45465,7 @@ MonoBehaviour:
   onPickUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075048826}
+      - m_Target: {fileID: 0}
         m_MethodName: Grabbed
         m_Mode: 1
         m_Arguments:
@@ -45606,62 +45525,6 @@ MonoBehaviour:
     componentIDHasBeenUsed: 1
   _parentView: {fileID: 0}
   _childViews: []
---- !u!114 &2075048826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075048812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ce584a4a124504d9f2c61e5647621c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attachmentFlags: 44
-  attachmentOffset: {fileID: 0}
-  catchingSpeedThreshold: -1
-  releaseVelocityStyle: 1
-  releaseVelocityTimeOffset: -0.011
-  scaleReleaseVelocity: 1.1
-  scaleReleaseVelocityThreshold: -1
-  scaleReleaseVelocityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  restoreOriginalParent: 0
-  onPickUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromHand:
-    m_PersistentCalls:
-      m_Calls: []
-  onHeldUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  interactable: {fileID: 0}
-  Ownership: -1
-  rtTransform: {fileID: 0}
 --- !u!1 &2081572210
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,12 +43,15 @@ public class TestBenchScript : MonoBehaviour
                
                 for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)
                 {
-                    FindObjectsOfType<CoinScript>()[i].Return();                   
+                    FindObjectsOfType<CoinScript>()[i].Return();
+                    //FindObjectsOfType<CoinScript>()[i].Shade("HRDP/Lit");
                 } 
                 BalanceScales.SetActive(false);
+                Collection.GetComponent<CollectionTableScript>().enabled = true;
                 Collection.GetComponent<CollectionTableScript>().Blockcount = 0;
                 Sound.clip = Disapointment;
                 Sound.Play();
+
                 gameObject.SetActive(false);
 
             }

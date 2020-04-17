@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class ScaleDisplayScript : MonoBehaviour
 {
     public GameObject LeftScale;//gameobject of the left scale

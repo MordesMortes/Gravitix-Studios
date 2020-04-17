@@ -10,9 +10,7 @@ public class CoinScript : MonoBehaviour
 {
     [Range(1f,30f)]
     public int CoinWeight;//weight of this coin for the second puzzle
-    public bool IsFake;//is this a real or fake coin for the first puzzle
-    public bool OwnedByPlayer1;//sets ownership to player 1
-    public bool OwnedByPlayer2;//sets ownership to player 2 
+    public bool IsFake;//is this a real or fake coin for the first puzzle    
     Vector3 Initialposition;//initial position of gameobject
     Quaternion InitialRotation;//initial rotation of gameobject
     [HideInInspector]
@@ -79,6 +77,7 @@ public class CoinScript : MonoBehaviour
     {
         gameObject.transform.position = Initialposition;
         gameObject.transform.rotation = InitialRotation;
+        Shade("HDRP/Lit");
     }
     public void Shade(string Shade)
     {
