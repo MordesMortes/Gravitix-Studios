@@ -3517,7 +3517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!114 &140923196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4288,7 +4287,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: 0.109375, y: 0.0390625, z: 0.0390625, w: -0.0390625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6449,7 +6448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!65 &256064333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8213,7 +8211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!114 &367511969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10774,7 +10771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!65 &470151915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14685,7 +14681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!65 &679599602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16641,7 +16636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!114 &739837888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18589,7 +18583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!54 &826807485
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22570,7 +22563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!65 &1030886968
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24898,7 +24890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!65 &1131172171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29540,7 +29531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!54 &1312487612
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34673,7 +34663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!114 &1593022026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36585,7 +36574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!114 &1663085789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38659,7 +38647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!65 &1744953832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40209,9 +40196,9 @@ MonoBehaviour:
   - {fileID: 367511964}
   - {fileID: 739837883}
   - {fileID: 1663085784}
-  BalanceScales: {fileID: 0}
+  BalanceScales: {fileID: 1381833301}
   RealtimeScales: {fileID: 1695846509}
-  Collection: {fileID: 0}
+  Collection: {fileID: 405222342}
   Sound: {fileID: 0}
   Disapointment: {fileID: 0}
   Success: {fileID: 0}
@@ -45092,7 +45079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf6aa7331db92640a55a97417fd56eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRend: {fileID: 0}
 --- !u!65 &2075048820
 BoxCollider:
   m_ObjectHideFlags: 0
