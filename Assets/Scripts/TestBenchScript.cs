@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class TestBenchScript : MonoBehaviour
 {
     public GameObject RealtimeCubes;//the hidden realitime cubes folder to be set active
@@ -12,22 +12,36 @@ public class TestBenchScript : MonoBehaviour
     public AudioSource Sound;//audio source
     public AudioClip Disapointment;//the sound file that indicates failure
     public AudioClip Success;//the sound that indicates success
+    int BlockCount = 0;//count of blocks
+    TextMeshPro Display;//display for showing the riddle and number of brothers
+    private void Start()
+    {
+        Display = GetComponentInChildren<TextMeshPro>();
+        Display.SetText("one of these things is not like the others one of these things is not quite the same, all his brothers go in before him and then they never come out again");
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Block"))
         {
-            
-            collision.gameObject.GetComponent<CoinScript>().Reveal();
-            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true)
+            BlockCount++; 
+            if (BlockCount == 6)
             {
-                gameObject.GetComponent<Rigidbody>().Sleep();
-                gameObject.GetComponent<Rigidbody>().detectCollisions = false;
+                BlockCount = 1;
+                
+            }
+            Display.SetText("one of these things is not like the others one of these things is not quite the same, all his brothers go in before him and then they never come out again" + "\n" + BlockCount.ToString());
+
+        }
+        collision.gameObject.GetComponent<CoinScript>().Reveal();
+            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount == 5)
+            {
+
+                gameObject.SetActive(false);
                 RealtimeCubes.SetActive(true);
                 BalanceScales.SetActive(false);
                 RealtimeScales.SetActive(true);
                 for (int i = 0; i < NonRealtimeCubes.Length; i++)
                 {
-                    //NonRealtimeCubes[i].GetComponent<CoinScript>().Shade("Dissolve");//adds Dissolve shader 
                     NonRealtimeCubes[i].SetActive(false);
                 }
                 for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)
@@ -39,22 +53,27 @@ public class TestBenchScript : MonoBehaviour
 
             }
             if (collision.gameObject.GetComponent<CoinScript>().Reveal() == false)
-            { 
+            {        
                
-                for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)
-                {
-                    FindObjectsOfType<CoinScript>()[i].Return();
-                    //FindObjectsOfType<CoinScript>()[i].Shade("HRDP/Lit");
-                } 
-                BalanceScales.SetActive(false);
-                Collection.GetComponent<CollectionTableScript>().enabled = true;
-                Collection.GetComponent<CollectionTableScript>().Blockcount = 0;
+                
+                
                 Sound.clip = Disapointment;
                 Sound.Play();
 
-                gameObject.SetActive(false);
+                
 
             }
-        }
+            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount != 5)
+            {
+                
+                
+                Sound.clip = Disapointment;
+                Sound.Play();
+
+                
+            }
+
+
+        
     }
 }

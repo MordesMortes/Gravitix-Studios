@@ -13,8 +13,7 @@ public class CoinScript : MonoBehaviour
     public bool IsFake;//is this a real or fake coin for the first puzzle    
     Vector3 Initialposition;//initial position of gameobject
     Quaternion InitialRotation;//initial rotation of gameobject
-    [HideInInspector]
-    public GameObject CollidedObject;//object that has collided with the coin that is tagged with
+    
     RealtimeAvatarManager _avatarManager;//gets all the avatars of the players
     private MeshRenderer myRend;//meshrenderer to make objects randomly colored and to to allow shaders to be changed
 
@@ -32,28 +31,43 @@ public class CoinScript : MonoBehaviour
         }
         
     }
-    public void EnScale(float scale)
-    {
-        gameObject.transform.localScale = gameObject.transform.localScale * scale;
-    }
+   
     public bool Reveal()
     {
         
         if (IsFake == false)
         {
-            gameObject.transform.position = Initialposition;
-            gameObject.transform.rotation = InitialRotation;
-            foreach (var item in _avatarManager.avatars)
-            {
-                _avatarManager.avatars[item.Key].gameObject.GetComponent<GravityGun>().ReSpawn();
-            }
+            
+            ReturnToStart();
+            ReturnToRealtime();
+            gameObject.GetComponentInParent<GravityGun>().DropObj();
+            ReturnToStart();
+            
+
+            //for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)
+            //{                
+            //    FindObjectsOfType<CoinScript>()[i].ReturnToRealtime();
+            //    FindObjectsOfType<CoinScript>()[i].Return();
+            //    FindObjectsOfType<CoinScript>()[i].Shade("HDRP/Lit");
+            //}
+            //foreach (var item in _avatarManager.avatars)
+            //{
+            //    _avatarManager.avatars[item.Key].gameObject.GetComponent<GravityGun>().ReSpawn();
+            //}
             
             return false;
             
         }
         if (IsFake == true)
         {
-            Destroy(gameObject, 3f);
+            
+            
+            ReturnToStart();
+            ReturnToRealtime();
+            gameObject.GetComponentInParent<GravityGun>().DropObj();
+            ReturnToStart();
+            
+            //Destroy(gameObject, 3f);
             
             return true;
         }
@@ -68,19 +82,27 @@ public class CoinScript : MonoBehaviour
         GetComponent<Rigidbody>().mass = CoinWeight;
     }
 
-    private void OnDestroy()
-    {
-        gameObject.GetComponentInParent<GravityGun>().DropObj();
-    }
+    //private void OnDestroy()
+    //{
+    //    gameObject.GetComponentInParent<GravityGun>().DropObj();
+    //}
 
-    public void Return()
+    public void ReturnToStart()
     {
         gameObject.transform.position = Initialposition;
         gameObject.transform.rotation = InitialRotation;
-        Shade("HDRP/Lit");
+        
     }
     public void Shade(string Shade)
     {
         myRend.material.shader = Shader.Find(Shade);
     }
+    public void ReturnToRealtime()
+    {
+        
+        gameObject.GetComponent<RealtimeTransform>().enabled = true;
+        gameObject.GetComponent<RealtimeView>().enabled = true;
+        
+    }
+   
 }

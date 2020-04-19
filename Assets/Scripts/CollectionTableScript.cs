@@ -18,13 +18,21 @@ public class CollectionTableScript : MonoBehaviour
             Blockcount++;
             collision.gameObject.GetComponent<RealtimeView>().enabled = false;
             collision.gameObject.GetComponent<RealtimeTransform>().enabled = false;
-            collision.gameObject.GetComponent<CoinScript>().Shade("Shader Graphs/Hologram");
+            //collision.gameObject.GetComponent<CoinScript>().Shade("Shader Graphs/Hologram");
         }
         if (Blockcount == 5)
         {
             BalanceScales.SetActive(true);
-            gameObject.GetComponent<Renderer>().material.shader = Shader.Find("Shader Graphs/Hologram");
+            //gameObject.GetComponent<Renderer>().material.shader = Shader.Find("Shader Graphs/Hologram");
 
+        }
+        if (Blockcount == 0)
+        {
+            //gameObject.GetComponent<Renderer>().material.shader = Shader.Find("HDRP/Lit");
+        }
+        if (Blockcount < 0)
+        {
+            Blockcount = 0;
         }
     }
     private void OnCollisionExit(Collision collision)
@@ -34,8 +42,8 @@ public class CollectionTableScript : MonoBehaviour
             Blockcount--; 
             collision.gameObject.GetComponent<RealtimeView>().enabled = true;
             collision.gameObject.GetComponent<RealtimeTransform>().enabled = true;
-            collision.gameObject.GetComponent<CoinScript>().Shade("HDRP/Lit");
+            //collision.gameObject.GetComponent<CoinScript>().Shade("HDRP/Lit");
         }
-
+        
     }
 }
