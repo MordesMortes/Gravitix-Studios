@@ -14,6 +14,7 @@ public class Flashlight : MonoBehaviour
     void Start()
     {
         myLight = GetComponent<Light>();
+        myLight.enabled = false;
     }
 
     void Update()

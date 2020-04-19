@@ -35,7 +35,7 @@ public class TestBenchScript : MonoBehaviour
         collision.gameObject.GetComponent<CoinScript>().Reveal();
             if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount == 5)
             {
-
+                Debug.Log("hit");
                 gameObject.SetActive(false);
                 RealtimeCubes.SetActive(true);
                 BalanceScales.SetActive(false);
@@ -53,10 +53,10 @@ public class TestBenchScript : MonoBehaviour
 
             }
             if (collision.gameObject.GetComponent<CoinScript>().Reveal() == false)
-            {        
-               
-                
-                
+            {
+
+
+                Debug.Log("false only hit");
                 Sound.clip = Disapointment;
                 Sound.Play();
 
@@ -65,8 +65,8 @@ public class TestBenchScript : MonoBehaviour
             }
             if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount != 5)
             {
-                
-                
+
+                Debug.Log("!=5 hit");
                 Sound.clip = Disapointment;
                 Sound.Play();
 

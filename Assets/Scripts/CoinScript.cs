@@ -37,11 +37,16 @@ public class CoinScript : MonoBehaviour
         
         if (IsFake == false)
         {
-            
-            ReturnToStart();
-            ReturnToRealtime();
-            gameObject.GetComponentInParent<GravityGun>().DropObj();
-            ReturnToStart();
+            if (gameObject.GetComponentInParent<GravityGun>())
+            {
+                gameObject.GetComponentInParent<GravityGun>().DropObj();
+                ReturnToStart();
+            }
+            if (gameObject.GetComponentInParent<GravityGun>() == false)
+            {
+                ReturnToStart();
+                ReturnToRealtime();
+            }
             
 
             //for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)
@@ -60,12 +65,16 @@ public class CoinScript : MonoBehaviour
         }
         if (IsFake == true)
         {
-            
-            
-            ReturnToStart();
-            ReturnToRealtime();
-            gameObject.GetComponentInParent<GravityGun>().DropObj();
-            ReturnToStart();
+            if (gameObject.GetComponentInParent<GravityGun>())
+            {
+                gameObject.GetComponentInParent<GravityGun>().DropObj();
+                ReturnToStart();
+            }
+            if (gameObject.GetComponentInParent<GravityGun>() == false)
+            {
+                ReturnToStart();
+                ReturnToRealtime();
+            }
             
             //Destroy(gameObject, 3f);
             
