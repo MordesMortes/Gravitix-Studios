@@ -8,6 +8,7 @@ public class CollectionTableScript : MonoBehaviour
     [HideInInspector]
     public int Blockcount = 0;
     public GameObject BalanceScales;
+    public GameObject Message;
     public AudioSource Success;//success sound
     public AudioSource Dissapointment;//failure sound
     
@@ -23,6 +24,7 @@ public class CollectionTableScript : MonoBehaviour
         if (Blockcount == 5)
         {
             BalanceScales.SetActive(true);
+            Message.SetActive(false);
             //gameObject.GetComponent<Renderer>().material.shader = Shader.Find("Shader Graphs/Hologram");
 
         }

@@ -16,9 +16,11 @@ public class ScaleDisplayScript : MonoBehaviour
     public AudioClip[] Dissapointment;//the sound that plays when one fails
     public AudioClip Success;//teh sweet sound of success
     int Current = 0;//how the player is currently disapointing (int for playing fail sounds)
+    
     private void Awake()
     {
         FinalScore = Random.Range(1, 41);
+        
       
     }
     private void Start()
