@@ -16,12 +16,17 @@ public class CoinScript : MonoBehaviour
     
     RealtimeAvatarManager _avatarManager;//gets all the avatars of the players
     private MeshRenderer myRend;//meshrenderer to make objects randomly colored and to to allow shaders to be changed
+    public Material DefaultMaterial;
+    public Material Hologram;
+    public Material[] materials;
+    private Color colour;//colour of the block so that it can be reapplied later
 
 
     private void Start()
     {
         myRend = GetComponent<MeshRenderer>();
         myRend.material.SetColor("_BaseColor", Random.ColorHSV());
+        colour = Random.ColorHSV();
         _avatarManager = FindObjectOfType<RealtimeAvatarManager>();
         Initialposition = gameObject.transform.position;
         InitialRotation = gameObject.transform.rotation;
@@ -102,9 +107,20 @@ public class CoinScript : MonoBehaviour
         gameObject.transform.rotation = InitialRotation;
         
     }
-    public void Shade(string Shade)
+    public void Shade()
     {
-        myRend.material.shader = Shader.Find(Shade);
+        materials[0] = DefaultMaterial;
+        materials[0].SetColor("_BaseColor", colour);
+        materials[1] = Hologram;
+        myRend.materials = materials;
+        //myRend.material.SetColor("_BaseColor", colour);
+    }
+    public void UnShade()
+    {
+        materials[1] = DefaultMaterial;
+        materials[1].SetColor("_BaseColor", colour);
+        myRend.materials = materials;
+        //myRend.material.SetColor("_BaseColor", colour);
     }
     public void ReturnToRealtime()
     {

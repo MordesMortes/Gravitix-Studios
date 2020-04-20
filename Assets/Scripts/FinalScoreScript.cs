@@ -7,14 +7,18 @@ public class FinalScoreScript : RealtimeComponent
 {
     private FinalScoreModel _model;
     private int _finalScore;
-   
+    public ScaleDisplayScript _scaleDisplayScriptValue;
+    
 
-   private FinalScoreModel model
+    private FinalScoreModel model
     {
         set 
         {
             _model = value;
         }
     }
-   
+   private void UpdateFinalScore()
+    {
+        _finalScore = _scaleDisplayScriptValue.FinalScore;
+    }
 }

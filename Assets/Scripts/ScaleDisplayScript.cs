@@ -9,7 +9,8 @@ public class ScaleDisplayScript : MonoBehaviour
 {
     public GameObject LeftScale;//gameobject of the left scale
     public GameObject RightScale;//gameobject of the right scale
-    private int FinalScore;//the winning weight
+    [HideInInspector]
+    public int FinalScore;//the winning weight
     public TextMeshPro Display;//display of the winning weight
     public TextMeshPro DisplayWeight;//display current weight
     public AudioSource AudioSource;//The sound that plays when one wins
