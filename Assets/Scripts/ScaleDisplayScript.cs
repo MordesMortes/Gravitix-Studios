@@ -12,7 +12,6 @@ public class ScaleDisplayScript : MonoBehaviour
     [HideInInspector]
     public int FinalScore;//the winning weight
     public TextMeshPro Display;//display of the winning weight
-    public TextMeshPro FinalScoreDisplay;//the target number displayed for players
     public TextMeshPro DisplayWeight;//display current weight
     public AudioSource AudioSource;//The sound that plays when one wins
     public AudioClip[] Dissapointment;//the sound that plays when one fails
@@ -22,7 +21,7 @@ public class ScaleDisplayScript : MonoBehaviour
     
     private void Awake()
     {
-        FinalScore = Random.Range(1, 41);
+        //FinalScore = GetComponent<FinalScoreScript>().
         GetComponent<FinalScoreScript>()._finalScore = Random.Range(1, 41);
 
 
@@ -30,7 +29,7 @@ public class ScaleDisplayScript : MonoBehaviour
     private void Start()
     {
         //Display.SetText(FinalScore.ToString());      
-        FinalScoreDisplay.SetText(GetComponent<FinalScoreScript>()._model.finalScore.ToString());
+        Display.SetText(GetComponent<FinalScoreScript>()._finalScore.ToString());
         
     }
 
@@ -42,14 +41,14 @@ public class ScaleDisplayScript : MonoBehaviour
             weight = weight * -1;//corrects negatives into positives
         }
         DisplayWeight.SetText(weight.ToString());
-        if (weight == FinalScore)
+        if (weight == GetComponent<FinalScoreScript>()._model.finalScore)
         {           
             Display.SetText("Yay you can add and subtract mommy and daddy must be so proud");
             DisplayWeight.SetText("The other person did all the math for you didn't they");
             AudioSource.clip = Success;
             AudioSource.Play();
         }
-        if (weight != FinalScore)
+        if (weight != GetComponent<FinalScoreScript>()._model.finalScore)
         {
             AudioSource.clip = Dissapointment[Current];
             AudioSource.Play();
