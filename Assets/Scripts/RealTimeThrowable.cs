@@ -38,4 +38,5 @@ public class RealTimeThrowable : Throwable
         rtTransform.RequestOwnership();
         Ownership = rtTransform.ownerID;
     }
+    
 }
