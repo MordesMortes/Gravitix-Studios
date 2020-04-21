@@ -6,8 +6,8 @@ using Normal.Realtime;
 public class FinalScoreScript : RealtimeComponent
 {
     private FinalScoreModel _model;
-    private int _finalScore;
-    public ScaleDisplayScript _scaleDisplayScriptValue;
+    public int _finalScore;
+    
     
 
     private FinalScoreModel model
@@ -19,6 +19,11 @@ public class FinalScoreScript : RealtimeComponent
     }
    private void UpdateFinalScore()
     {
-        _finalScore = _scaleDisplayScriptValue.FinalScore;
+        
+        _finalScore = _model.finalScore;
+    }
+    private void Update()
+    {
+        UpdateFinalScore();
     }
 }

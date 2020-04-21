@@ -14960,6 +14960,8 @@ GameObject:
   - component: {fileID: 668953907}
   - component: {fileID: 668953906}
   - component: {fileID: 668953905}
+  - component: {fileID: 668953911}
+  - component: {fileID: 668953910}
   m_Layer: 0
   m_Name: display
   m_TagString: Untagged
@@ -15158,6 +15160,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668953903}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &668953910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668953903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 36478937}
+  _sceneViewUUID: 33bb0aa37664cd4893cf8bf23544de84
+  _sceneViewOwnedByCreatingClient: 1
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _isRootPrefabView: 0
+  _components:
+  - componentID: 1
+    component: {fileID: 668953911}
+    componentIDHasBeenUsed: 1
+  _parentView: {fileID: 0}
+  _childViews: []
+--- !u!114 &668953911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668953903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739ca5fb973fe434581b994a3e6f70d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _finalScore: 12
 --- !u!1001 &670632400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23377,7 +23416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981281118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 589976458}
@@ -31996,7 +32035,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352077350}
   m_LocalRotation: {x: 0.00000008940692, y: -0.37074465, z: -0.00000023841844, w: 0.92873484}
-  m_LocalPosition: {x: 0, y: 0, z: -1.02}
+  m_LocalPosition: {x: 0, y: 0, z: -1.2212}
   m_LocalScale: {x: 0.101296924, y: 0.06866534, z: 0.021411767}
   m_Children: []
   m_Father: {fileID: 1304017855}
@@ -32004,7 +32043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 316.477, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.6, y: -0.89}
+  m_AnchoredPosition: {x: -1.4237, y: -0.89}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1352077352

@@ -18,17 +18,20 @@ public class ScaleDisplayScript : MonoBehaviour
     public AudioClip[] Dissapointment;//the sound that plays when one fails
     public AudioClip Success;//teh sweet sound of success
     int Current = 0;//how the player is currently disapointing (int for playing fail sounds)
+    FinalScoreModel _finalScore;//the final score shared 
     
     private void Awake()
     {
         FinalScore = Random.Range(1, 41);
+        
         
       
     }
     private void Start()
     {
         //Display.SetText(FinalScore.ToString());      
-        FinalScoreDisplay.SetText(FinalScore.ToString());
+        FinalScoreDisplay.SetText(GetComponent<FinalScoreScript>()._finalScore.ToString());
+        GetComponent<FinalScoreScript>()._finalScore = FinalScore;
     }
 
     public int Weigh()
