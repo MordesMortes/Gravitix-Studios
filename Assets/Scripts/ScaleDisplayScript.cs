@@ -23,15 +23,15 @@ public class ScaleDisplayScript : MonoBehaviour
     private void Awake()
     {
         FinalScore = Random.Range(1, 41);
-        
-        
-      
+        GetComponent<FinalScoreScript>()._finalScore = Random.Range(1, 41);
+
+
     }
     private void Start()
     {
         //Display.SetText(FinalScore.ToString());      
-        FinalScoreDisplay.SetText(GetComponent<FinalScoreScript>()._finalScore.ToString());
-        GetComponent<FinalScoreScript>()._finalScore = FinalScore;
+        FinalScoreDisplay.SetText(GetComponent<FinalScoreScript>()._model.finalScore.ToString());
+        
     }
 
     public int Weigh()
