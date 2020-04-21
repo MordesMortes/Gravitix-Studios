@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Normal.Realtime;
+using TMPro;
 
 public class CollectionTableScript : MonoBehaviour
 {
     [HideInInspector]
     public int Blockcount = 0;
     public GameObject BalanceScales;
-    public GameObject Message;
+    public TextMeshPro Message;
     public Material Hologram;//the hologram material to add to the object
     public Material DefaultMaterial;//the default material
+    public Material DefaultTransparent;//the default material only transparent
     public Material[] materials;
     public AudioSource audioSource;
     public AudioClip Success;//success sound
@@ -19,6 +21,7 @@ public class CollectionTableScript : MonoBehaviour
     private void Start()
     {
         myRend = GetComponent<MeshRenderer>();
+        Message = GetComponentInChildren<TextMeshPro>();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -33,7 +36,7 @@ public class CollectionTableScript : MonoBehaviour
         if (Blockcount == 5)
         {
             BalanceScales.SetActive(true);
-            Message.SetActive(false);
+            Message.text = "Oh what's that behind you?";
             collision.gameObject.GetComponent<CoinScript>().Shade();
             Shade();
 
@@ -64,12 +67,13 @@ public class CollectionTableScript : MonoBehaviour
     }
     public void Shade()
         {
-            materials[0] = DefaultMaterial;
+            materials[0] = DefaultTransparent;
             materials[1] = Hologram;
             myRend.materials = materials;
         }
     public void UnShade()
     {
+        materials[0] = DefaultMaterial;
         materials[1] = DefaultMaterial;
         myRend.materials = materials;
     }

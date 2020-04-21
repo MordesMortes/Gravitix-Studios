@@ -12,6 +12,7 @@ public class ScaleDisplayScript : MonoBehaviour
     [HideInInspector]
     public int FinalScore;//the winning weight
     public TextMeshPro Display;//display of the winning weight
+    public TextMeshPro FinalScoreDisplay;//the target number displayed for players
     public TextMeshPro DisplayWeight;//display current weight
     public AudioSource AudioSource;//The sound that plays when one wins
     public AudioClip[] Dissapointment;//the sound that plays when one fails
@@ -25,9 +26,9 @@ public class ScaleDisplayScript : MonoBehaviour
       
     }
     private void Start()
-    {        
-        Display.SetText(FinalScore.ToString());      
-
+    {
+        //Display.SetText(FinalScore.ToString());      
+        FinalScoreDisplay.SetText(FinalScore.ToString());
     }
 
     public int Weigh()

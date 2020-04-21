@@ -17,7 +17,8 @@ public class CoinScript : MonoBehaviour
     RealtimeAvatarManager _avatarManager;//gets all the avatars of the players
     private MeshRenderer myRend;//meshrenderer to make objects randomly colored and to to allow shaders to be changed
     public Material DefaultMaterial;
-    public Material Hologram;
+    public Material DefaultTransparent;//transparent version of the default material
+    public Material Hologram;//hologram material to indicate realtime status
     public Material[] materials;
     private Color colour;//colour of the block so that it can be reapplied later
 
@@ -54,16 +55,6 @@ public class CoinScript : MonoBehaviour
             }
             
 
-            //for (int i = 0; i < FindObjectsOfType<CoinScript>().Length; i++)
-            //{                
-            //    FindObjectsOfType<CoinScript>()[i].ReturnToRealtime();
-            //    FindObjectsOfType<CoinScript>()[i].Return();
-            //    FindObjectsOfType<CoinScript>()[i].Shade("HDRP/Lit");
-            //}
-            //foreach (var item in _avatarManager.avatars)
-            //{
-            //    _avatarManager.avatars[item.Key].gameObject.GetComponent<GravityGun>().ReSpawn();
-            //}
             
             return false;
             
@@ -81,7 +72,7 @@ public class CoinScript : MonoBehaviour
                 ReturnToRealtime();
             }
             
-            //Destroy(gameObject, 3f);
+           
             
             return true;
         }
@@ -96,11 +87,7 @@ public class CoinScript : MonoBehaviour
         GetComponent<Rigidbody>().mass = CoinWeight;
     }
 
-    //private void OnDestroy()
-    //{
-    //    gameObject.GetComponentInParent<GravityGun>().DropObj();
-    //}
-
+   
     public void ReturnToStart()
     {
         gameObject.transform.position = Initialposition;
@@ -109,18 +96,19 @@ public class CoinScript : MonoBehaviour
     }
     public void Shade()
     {
-        materials[0] = DefaultMaterial;
-        materials[0].SetColor("_BaseColor", colour);
+        materials[0] = DefaultTransparent;
+        //materials[0].SetColor("_BaseColor", colour);
         materials[1] = Hologram;
         myRend.materials = materials;
-        //myRend.material.SetColor("_BaseColor", colour);
+      
     }
     public void UnShade()
     {
+        materials[0] = DefaultMaterial;
         materials[1] = DefaultMaterial;
         materials[1].SetColor("_BaseColor", colour);
         myRend.materials = materials;
-        //myRend.material.SetColor("_BaseColor", colour);
+        
     }
     public void ReturnToRealtime()
     {
