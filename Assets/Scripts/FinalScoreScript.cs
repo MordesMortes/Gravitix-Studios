@@ -29,7 +29,7 @@ public class FinalScoreScript : RealtimeComponent
     {
         UpdateBlockCount();
     }
-   private void UpdateFinalScore()
+   public void UpdateFinalScore()
     {
         
         _finalScore = _model.finalScore;
@@ -38,7 +38,7 @@ public class FinalScoreScript : RealtimeComponent
     {
         _model.finalScore = _finalScore;
     }
-    private void UpdateBlockCount()
+    public void UpdateBlockCount()
     {
         _blockCount = _model.blockCount;
     }
