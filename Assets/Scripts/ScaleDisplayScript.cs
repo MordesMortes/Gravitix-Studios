@@ -24,6 +24,7 @@ public class ScaleDisplayScript : MonoBehaviour
     {
         Winning = FindObjectOfType<FinalScoreScript>();
         Winning._finalScore = Random.Range(1, 41);
+        Winning.ResetFinalScore();
 
 
     }

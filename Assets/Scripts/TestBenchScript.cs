@@ -29,7 +29,7 @@ public class TestBenchScript : MonoBehaviour
         {
             BlockCount++;
             _blockCount.SetBlockCount(BlockCount);
-            BlockCount = _blockCount._blockCount;
+            
             
             if (BlockCount == 6)
             {

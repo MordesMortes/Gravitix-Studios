@@ -44,7 +44,7 @@ public class FinalScoreScript : RealtimeComponent
     }
     public void SetBlockCount(int value)
     {
-        _blockCount = value;
+        _model.blockCount = value;
         
     }
     
