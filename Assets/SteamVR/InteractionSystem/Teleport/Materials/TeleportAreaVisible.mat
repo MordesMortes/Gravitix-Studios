@@ -8,14 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TeleportAreaVisible
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e68298eb01e3a1d4696d00f777c12fc4,
+    type: 3}
   m_ShaderKeywords: RECEIVE_SHADOWS S_SPECULAR_NONE S_UNLIT _ALPHAPREMULTIPLY_ON _EMISSION
     _NORMALMAP_TANGENT_SPACE
-  m_LightmapFlags: 0
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap:
+    MotionVector: User
     OriginalShader: Standard
   disabledShaderPasses:
   - DistortionVectors
@@ -99,7 +101,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f33ccd07f9433f44f8c5430938b168ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -183,7 +185,7 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
-    - _Darken: 0.641
+    - _Darken: 0.431
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalMapScale: 1
@@ -258,7 +260,7 @@ Material:
     - _ReceivesSSR: 1
     - _RefractionModel: 0
     - _SSRefractionProjectionModel: 0
-    - _SeeThru: 0.358
+    - _SeeThru: 0.174
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -330,7 +332,7 @@ Material:
     - _Specular: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _TintColor: {r: 0.22033198, g: 0.41133347, b: 0.516, a: 0.453}
+    - _TintColor: {r: 0.22033194, g: 0.4113334, b: 0.516, a: 0.20784314}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
