@@ -28,8 +28,8 @@ public class CollectionTableScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Block"))
         {
             Blockcount++;
-            collision.gameObject.GetComponent<RealtimeView>().enabled = false;
-            collision.gameObject.GetComponent<RealtimeTransform>().enabled = false;
+            //collision.gameObject.GetComponent<RealtimeView>().enabled = false;
+            //collision.gameObject.GetComponent<RealtimeTransform>().enabled = false;
             collision.gameObject.GetComponent<CoinScript>().Shade();//remove if hologram can't be fixed
             
         }
@@ -58,8 +58,8 @@ public class CollectionTableScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Block") && Blockcount < 5)
         {
             Blockcount--; 
-            collision.gameObject.GetComponent<RealtimeView>().enabled = true;
-            collision.gameObject.GetComponent<RealtimeTransform>().enabled = true;
+            //collision.gameObject.GetComponent<RealtimeView>().enabled = true;
+            //collision.gameObject.GetComponent<RealtimeTransform>().enabled = true;
             collision.gameObject.GetComponent<CoinScript>().UnShade();//remove if not using hologram
             
         }

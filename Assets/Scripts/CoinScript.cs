@@ -51,7 +51,7 @@ public class CoinScript : MonoBehaviour
             if (gameObject.GetComponentInParent<GravityGun>() == false)
             {
                 ReturnToStart();
-                ReturnToRealtime();
+                //ReturnToRealtime();
             }
             
 
@@ -69,7 +69,7 @@ public class CoinScript : MonoBehaviour
             if (gameObject.GetComponentInParent<GravityGun>() == false)
             {
                 ReturnToStart();
-                ReturnToRealtime();
+                //ReturnToRealtime();
             }
             
            
@@ -97,7 +97,6 @@ public class CoinScript : MonoBehaviour
     public void Shade()
     {
         materials[0] = DefaultTransparent;
-        //materials[0].SetColor("_BaseColor", colour);
         materials[1] = Hologram;
         myRend.materials = materials;
       
