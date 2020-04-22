@@ -70,6 +70,12 @@ public class TestBenchScript : MonoBehaviour
                 
 
             }
+
+            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == false && BlockCount == 5)
+            {
+            Display.SetText("What's it like being a failure?");
+            }
+
             if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount != 5)//_blockCount._blockCount != 5)
             {
 
