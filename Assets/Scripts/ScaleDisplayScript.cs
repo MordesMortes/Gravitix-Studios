@@ -41,14 +41,14 @@ public class ScaleDisplayScript : MonoBehaviour
             weight = weight * -1;//corrects negatives into positives
         }
         DisplayWeight.SetText(weight.ToString());
-        if (weight == GetComponent<FinalScoreScript>()._model.finalScore)
+        if (weight == GetComponent<FinalScoreScript>()._finalScore)
         {           
             Display.SetText("Yay you can add and subtract mommy and daddy must be so proud");
             DisplayWeight.SetText("The other person did all the math for you didn't they");
             AudioSource.clip = Success;
             AudioSource.Play();
         }
-        if (weight != GetComponent<FinalScoreScript>()._model.finalScore)
+        if (weight != GetComponent<FinalScoreScript>()._finalScore)
         {
             AudioSource.clip = Dissapointment[Current];
             AudioSource.Play();
