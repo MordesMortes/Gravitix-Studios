@@ -17,19 +17,20 @@ public class ScaleDisplayScript : MonoBehaviour
     public AudioClip[] Dissapointment;//the sound that plays when one fails
     public AudioClip Success;//teh sweet sound of success
     int Current = 0;//how the player is currently disapointing (int for playing fail sounds)
-    FinalScoreModel _finalScore;//the final score shared 
+    public FinalScoreScript Winning;//the finalscorescript object 
+    
     
     private void Awake()
     {
-        //FinalScore = GetComponent<FinalScoreScript>().
-        GetComponent<FinalScoreScript>()._finalScore = Random.Range(1, 41);
+        Winning = FindObjectOfType<FinalScoreScript>();
+        Winning._finalScore = Random.Range(1, 41);
 
 
     }
     private void Start()
     {
-        //Display.SetText(FinalScore.ToString());      
-        Display.SetText(GetComponent<FinalScoreScript>()._finalScore.ToString());
+        
+        Display.SetText(Winning._finalScore.ToString());
         
     }
 
@@ -41,14 +42,15 @@ public class ScaleDisplayScript : MonoBehaviour
             weight = weight * -1;//corrects negatives into positives
         }
         DisplayWeight.SetText(weight.ToString());
-        if (weight == GetComponent<FinalScoreScript>()._finalScore)
+        if (weight == Winning._finalScore)
         {           
             Display.SetText("Yay you can add and subtract mommy and daddy must be so proud");
             DisplayWeight.SetText("The other person did all the math for you didn't they");
             AudioSource.clip = Success;
+            AudioSource.spatialBlend = 1.0f;
             AudioSource.Play();
         }
-        if (weight != GetComponent<FinalScoreScript>()._finalScore)
+        if (weight != Winning._finalScore)
         {
             AudioSource.clip = Dissapointment[Current];
             AudioSource.Play();

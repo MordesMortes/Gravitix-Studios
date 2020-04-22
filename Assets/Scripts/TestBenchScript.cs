@@ -14,8 +14,12 @@ public class TestBenchScript : MonoBehaviour
     public AudioClip Success;//the sound that indicates success
     int BlockCount = 0;//count of blocks
     TextMeshPro Display;//display for showing the riddle and number of brothers
+    FinalScoreScript _blockCount;//realtime component for int for keeping track of blockcount
+    
     private void Start()
     {
+        
+        _blockCount = FindObjectOfType<FinalScoreScript>();
         Display = GetComponentInChildren<TextMeshPro>();
         Display.SetText("one of these things is not like the others one of these things is not quite the same, all his brothers go in before him and then they never come out again");
     }
@@ -23,7 +27,10 @@ public class TestBenchScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Block"))
         {
-            BlockCount++; 
+            BlockCount++;
+            _blockCount.SetBlockCount(BlockCount);
+            BlockCount = _blockCount._blockCount;
+            
             if (BlockCount == 6)
             {
                 BlockCount = 1;
@@ -33,9 +40,9 @@ public class TestBenchScript : MonoBehaviour
 
         }
         collision.gameObject.GetComponent<CoinScript>().Reveal();
-            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount == 5)
+            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount == 5)//_blockCount._blockCount == 5)
             {
-                Debug.Log("hit");
+                
                 gameObject.SetActive(false);
                 RealtimeCubes.SetActive(true);
                 BalanceScales.SetActive(false);
@@ -63,7 +70,7 @@ public class TestBenchScript : MonoBehaviour
                 
 
             }
-            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount != 5)
+            if (collision.gameObject.GetComponent<CoinScript>().Reveal() == true && BlockCount != 5)//_blockCount._blockCount != 5)
             {
 
                
@@ -76,4 +83,6 @@ public class TestBenchScript : MonoBehaviour
 
         
     }
+
+    
 }

@@ -7,14 +7,27 @@ public class FinalScoreScript : RealtimeComponent
 {
     public FinalScoreModel _model;
     public int _finalScore;
+    public int _blockCount;
     
 
     private FinalScoreModel model
     {
         set 
         {
+            if (_model != null)
+            {
+                _model.blockCountDidChange -= BlockCountDidChange;
+            }
             _model = value;
+            if (_model != null)
+            {
+                _model.blockCountDidChange += BlockCountDidChange;
+            }
         }
+    }
+    private void BlockCountDidChange(FinalScoreModel model, int value)
+    {
+        UpdateBlockCount();
     }
    private void UpdateFinalScore()
     {
@@ -25,4 +38,14 @@ public class FinalScoreScript : RealtimeComponent
     {
         _model.finalScore = _finalScore;
     }
+    private void UpdateBlockCount()
+    {
+        _blockCount = _model.blockCount;
+    }
+    public void SetBlockCount(int value)
+    {
+        _blockCount = value;
+        
+    }
+    
 }
