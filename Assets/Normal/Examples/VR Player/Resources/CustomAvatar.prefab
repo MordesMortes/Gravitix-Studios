@@ -108,7 +108,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4187294060141768}
-  - {fileID: 8967717444331811646}
+  - {fileID: 4109832963353549495}
   m_Father: {fileID: 4098411418399560}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -663,7 +663,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/InteractUI
     needsReinit: 0
   active: 1
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.09158063, g: 0.7862571, b: 0.9245283, a: 0}
   thickness: 0.002
   clickColor: {r: 0, g: 1, b: 0, a: 1}
   holder: {fileID: 0}
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5343769826616557869}
+  m_GameObject: {fileID: 4109832963353549110}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
@@ -1349,13 +1349,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e31a5aa5ee79f1408f623d53716a113, type: 3}
---- !u!4 &8967717444331811646 stripped
+--- !u!4 &4109832963353549495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7e31a5aa5ee79f1408f623d53716a113,
     type: 3}
   m_PrefabInstance: {fileID: 4109832963353548836}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5343769826616557869 stripped
+--- !u!1 &4109832963353549110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7e31a5aa5ee79f1408f623d53716a113,
     type: 3}
